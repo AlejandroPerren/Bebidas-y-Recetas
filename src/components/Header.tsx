@@ -10,7 +10,7 @@ export const Header = () => {
   const { pathname } = useLocation();
   const isHome = useMemo(() => pathname === "/", [pathname]);
 
-  const {fetchCategories, categories, searchRecipes} = useAppStore();
+  const {fetchCategories, categories, searchRecipes, showNotification} = useAppStore();
 
 
   useEffect(() => {
@@ -31,7 +31,10 @@ export const Header = () => {
 
     //TODO: Validar
     if(Object.values(searchFilters). includes('')){
-      console.log("Todos los campos son Obligatorios")
+      showNotification({
+        text: 'Todos los campos son obligatorios',
+        error: true
+      })
       return
     }
     searchRecipes(searchFilters)

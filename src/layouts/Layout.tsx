@@ -3,6 +3,7 @@ import { Header } from "../components/Header";
 import { Outlet } from "react-router-dom";
 import Modal from "../components/Modal";
 import { useAppStore } from "../stores/useAppStore";
+import Notification from "../components/Notification";
 
 export const Layout = () => {
   const { loadFromStorage } = useAppStore();
@@ -19,6 +20,7 @@ export const Layout = () => {
       </main>
 
       <Modal />
+      <Notification />
     </>
   );
 };

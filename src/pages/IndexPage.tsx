@@ -2,7 +2,7 @@ import { useMemo } from "react"
 import { useAppStore } from "../stores/useAppStore"
 import { DrinkCard } from "../components/DrinkCard"
 
-export const IndexPage = () => {
+export default function IndexPage()  {
 
   const {drinks} = useAppStore()
   
