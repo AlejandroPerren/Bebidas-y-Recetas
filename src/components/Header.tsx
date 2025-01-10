@@ -34,7 +34,7 @@ export const Header = () => {
       console.log("Todos los campos son Obligatorios")
       return
     }
-    searchRecipes()
+    searchRecipes(searchFilters)
 
   }
 
